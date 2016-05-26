@@ -116,6 +116,8 @@ list(APPEND WebCore_SOURCES
 
     platform/image-decoders/cairo/ImageDecoderCairo.cpp
 
+    platform/mediastream/openwebrtc/SDPProcessorScriptResource.cpp
+
     platform/network/soup/AuthenticationChallengeSoup.cpp
     platform/network/soup/CertificateInfo.cpp
     platform/network/soup/CookieJarSoup.cpp
@@ -196,6 +198,9 @@ set(WebCore_USER_AGENT_SCRIPTS
 )
 
 set(WebCore_USER_AGENT_SCRIPTS_DEPENDENCIES ${WEBCORE_DIR}/platform/wpe/RenderThemeWPE.cpp)
+
+set(WebCore_SDP_PROCESSOR_SCRIPTS ${WEBCORE_DIR}/Modules/mediastream/sdp.js)
+set(WebCore_SDP_PROCESSOR_SCRIPTS_DEPENDENCIES ${WEBCORE_DIR}/platform/mediastream/openwebrtc/SDPProcessorScriptResource.cpp)
 
 list(APPEND WebCore_LIBRARIES
     ${BCM_HOST_LIBRARIES}
