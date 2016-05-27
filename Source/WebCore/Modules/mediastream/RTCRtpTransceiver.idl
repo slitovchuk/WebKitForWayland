@@ -1,6 +1,5 @@
 /*
- * Copyright (C) 2012 Google Inc. All rights reserved.
- * Copyright (C) 2013 Nokia Corporation and/or its subsidiary(-ies).
+ * Copyright (C) 2016 Ericsson AB. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -12,7 +11,7 @@
  *    notice, this list of conditions and the following disclaimer
  *    in the documentation and/or other materials provided with the
  *    distribution.
- * 3. Neither the name of Google Inc. nor the names of its contributors
+ * 3. Neither the name of Ericsson nor the names of its contributors
  *    may be used to endorse or promote products derived from this
  *    software without specific prior written permission.
  *
@@ -30,13 +29,12 @@
  */
 
 [
-    Conditional=WEB_RTC,
-    Constructor(Dictionary dictionary),
-    ConstructorRaisesException
-] interface RTCSessionDescription {
-    [SetterRaisesException] readonly attribute DOMString type;
-    readonly attribute DOMString sdp;
+    Conditional=MEDIA_STREAM
+] interface RTCRtpTransceiver {
+    readonly attribute DOMString? mid;
+    readonly attribute RTCRtpSender sender;
+    readonly attribute RTCRtpReceiver receiver;
+    readonly attribute boolean stopped;
 
-    serializer = {type, sdp};
+    void stop();
 };
-

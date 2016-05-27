@@ -240,6 +240,7 @@ set(WebCore_NON_SVG_IDL_FILES
     Modules/mediastream/RTCPeerConnection.idl
     Modules/mediastream/RTCRtpReceiver.idl
     Modules/mediastream/RTCRtpSender.idl
+    Modules/mediastream/RTCRtpTransceiver.idl
     Modules/mediastream/RTCSessionDescription.idl
     Modules/mediastream/RTCStatsReport.idl
     Modules/mediastream/RTCStatsResponse.idl
@@ -942,10 +943,12 @@ set(WebCore_SOURCES
     Modules/mediastream/RTCPeerConnection.cpp
     Modules/mediastream/RTCRtpReceiver.cpp
     Modules/mediastream/RTCRtpSender.cpp
+    Modules/mediastream/RTCRtpTransceiver.cpp
     Modules/mediastream/RTCSessionDescription.cpp
     Modules/mediastream/RTCStatsReport.cpp
     Modules/mediastream/RTCStatsResponse.cpp
     Modules/mediastream/RTCTrackEvent.cpp
+    Modules/mediastream/SessionDescription.cpp
     Modules/mediastream/SDPProcessor.cpp
     Modules/mediastream/SourceInfo.cpp
     Modules/mediastream/UserMediaController.cpp
@@ -1205,9 +1208,7 @@ set(WebCore_SOURCES
     bindings/js/JSPopStateEventCustom.cpp
     bindings/js/JSReadableStreamPrivateConstructors.cpp
     bindings/js/JSReadableStreamSourceCustom.cpp
-    bindings/js/JSRTCIceCandidateCustom.cpp
     bindings/js/JSRTCPeerConnectionCustom.cpp
-    bindings/js/JSRTCSessionDescriptionCustom.cpp
     bindings/js/JSRTCStatsResponseCustom.cpp
     bindings/js/JSSQLResultSetRowListCustom.cpp
     bindings/js/JSSQLTransactionCustom.cpp
@@ -2300,7 +2301,6 @@ set(WebCore_SOURCES
     platform/graphics/transforms/TransformationMatrix.cpp
     platform/graphics/transforms/TranslateTransformOperation.cpp
 
-    platform/mediastream/MediaEndpoint.cpp
     platform/mediastream/MediaEndpointConfiguration.cpp
     platform/mediastream/MediaStreamPrivate.cpp
     platform/mediastream/MediaStreamTrackPrivate.cpp

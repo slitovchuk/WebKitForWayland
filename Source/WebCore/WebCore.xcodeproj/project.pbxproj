@@ -310,7 +310,6 @@
 		07C59B6E17F794F6000FBCBB /* JSMediaStreamTrackCustom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07C59B6D17F794F6000FBCBB /* JSMediaStreamTrackCustom.cpp */; };
 		07CA120E182D67D800D12197 /* JSRTCPeerConnectionCustom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07CA120D182D67D800D12197 /* JSRTCPeerConnectionCustom.cpp */; };
 		07CE77D516712A6A00C55A47 /* InbandTextTrackPrivateClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 07CE77D416712A6A00C55A47 /* InbandTextTrackPrivateClient.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		07D07B141834158800ABDD3C /* JSRTCSessionDescriptionCustom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07D07B131834158800ABDD3C /* JSRTCSessionDescriptionCustom.cpp */; };
 		07D637401BB0B11300256CE9 /* WebAudioSourceProviderAVFObjC.h in Headers */ = {isa = PBXBuildFile; fileRef = 07D6373E1BB0B11300256CE9 /* WebAudioSourceProviderAVFObjC.h */; };
 		07D637411BB0B11300256CE9 /* WebAudioSourceProviderAVFObjC.mm in Sources */ = {isa = PBXBuildFile; fileRef = 07D6373F1BB0B11300256CE9 /* WebAudioSourceProviderAVFObjC.mm */; };
 		07D6A4EF1BECF2D200174146 /* MockRealtimeMediaSource.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 07D6A4ED1BECF2D200174146 /* MockRealtimeMediaSource.cpp */; };
@@ -1906,7 +1905,6 @@
 		4AD01009127E642A0015035F /* HTMLOutputElement.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AD01006127E642A0015035F /* HTMLOutputElement.h */; };
 		4AD0173C127E82860015035F /* JSHTMLOutputElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4AD0173A127E82860015035F /* JSHTMLOutputElement.cpp */; };
 		4AD0173D127E82860015035F /* JSHTMLOutputElement.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AD0173B127E82860015035F /* JSHTMLOutputElement.h */; };
-		4AE0BF891836084400F3852D /* JSRTCIceCandidateCustom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4AE0BF881836083100F3852D /* JSRTCIceCandidateCustom.cpp */; };
 		4B2708C70AF19EE40065127F /* Pasteboard.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B2708C50AF19EE40065127F /* Pasteboard.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		4B2709830AF2E5E00065127F /* PasteboardMac.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4B2709810AF2E5E00065127F /* PasteboardMac.mm */; };
 		4B3043C70AE0370300A82647 /* Sound.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B3043C60AE0370300A82647 /* Sound.h */; };
@@ -7702,7 +7700,6 @@
 		07C59B6D17F794F6000FBCBB /* JSMediaStreamTrackCustom.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = JSMediaStreamTrackCustom.cpp; sourceTree = "<group>"; };
 		07CA120D182D67D800D12197 /* JSRTCPeerConnectionCustom.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = JSRTCPeerConnectionCustom.cpp; sourceTree = "<group>"; };
 		07CE77D416712A6A00C55A47 /* InbandTextTrackPrivateClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InbandTextTrackPrivateClient.h; sourceTree = "<group>"; };
-		07D07B131834158800ABDD3C /* JSRTCSessionDescriptionCustom.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = JSRTCSessionDescriptionCustom.cpp; sourceTree = "<group>"; };
 		07D6373E1BB0B11300256CE9 /* WebAudioSourceProviderAVFObjC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebAudioSourceProviderAVFObjC.h; sourceTree = "<group>"; };
 		07D6373F1BB0B11300256CE9 /* WebAudioSourceProviderAVFObjC.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = WebAudioSourceProviderAVFObjC.mm; sourceTree = "<group>"; };
 		07D6A4ED1BECF2D200174146 /* MockRealtimeMediaSource.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MockRealtimeMediaSource.cpp; sourceTree = "<group>"; };
@@ -9456,7 +9453,6 @@
 		4AD01007127E642A0015035F /* HTMLOutputElement.idl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HTMLOutputElement.idl; sourceTree = "<group>"; };
 		4AD0173A127E82860015035F /* JSHTMLOutputElement.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = JSHTMLOutputElement.cpp; sourceTree = "<group>"; };
 		4AD0173B127E82860015035F /* JSHTMLOutputElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSHTMLOutputElement.h; sourceTree = "<group>"; };
-		4AE0BF881836083100F3852D /* JSRTCIceCandidateCustom.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = JSRTCIceCandidateCustom.cpp; sourceTree = "<group>"; };
 		4B2708C50AF19EE40065127F /* Pasteboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pasteboard.h; sourceTree = "<group>"; };
 		4B2709810AF2E5E00065127F /* PasteboardMac.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PasteboardMac.mm; sourceTree = "<group>"; };
 		4B3043C60AE0370300A82647 /* Sound.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = Sound.h; sourceTree = "<group>"; };
@@ -22499,9 +22495,7 @@
 				FDBD1DFB167FE27D0051A11E /* JSOscillatorNodeCustom.cpp */,
 				FD8AA63D169514A700D2EA68 /* JSPannerNodeCustom.cpp */,
 				A85F22081430377D007CC884 /* JSPopStateEventCustom.cpp */,
-				4AE0BF881836083100F3852D /* JSRTCIceCandidateCustom.cpp */,
 				07CA120D182D67D800D12197 /* JSRTCPeerConnectionCustom.cpp */,
-				07D07B131834158800ABDD3C /* JSRTCSessionDescriptionCustom.cpp */,
 				07DC5FD317D3EEE90099F890 /* JSRTCStatsResponseCustom.cpp */,
 				51DCE8010CAC9F1C00488358 /* JSSQLResultSetRowListCustom.cpp */,
 				1AD2316D0CD269E700C1F194 /* JSSQLTransactionCustom.cpp */,
@@ -30546,7 +30540,6 @@
 				07969DAF17D14151007FF842 /* JSRTCDTMFSender.cpp in Sources */,
 				07969DB117D14151007FF842 /* JSRTCDTMFToneChangeEvent.cpp in Sources */,
 				07969DB517D14151007FF842 /* JSRTCIceCandidate.cpp in Sources */,
-				4AE0BF891836084400F3852D /* JSRTCIceCandidateCustom.cpp in Sources */,
 				07969DB717D14151007FF842 /* JSRTCIceCandidateEvent.cpp in Sources */,
 				073794EB19EE341E00E5A045 /* JSRTCIceServer.cpp in Sources */,
 				07969DB917D14151007FF842 /* JSRTCPeerConnection.cpp in Sources */,
@@ -30554,7 +30547,6 @@
 				5E2C43711BCF0D750001E2BC /* JSRTCRtpReceiver.cpp in Sources */,
 				5E2C43731BCF0D750001E2BC /* JSRTCRtpSender.cpp in Sources */,
 				07969DBB17D14151007FF842 /* JSRTCSessionDescription.cpp in Sources */,
-				07D07B141834158800ABDD3C /* JSRTCSessionDescriptionCustom.cpp in Sources */,
 				07969DC117D14151007FF842 /* JSRTCStatsReport.cpp in Sources */,
 				07969DC317D14151007FF842 /* JSRTCStatsResponse.cpp in Sources */,
 				07DC5FD417D3EEE90099F890 /* JSRTCStatsResponseCustom.cpp in Sources */,

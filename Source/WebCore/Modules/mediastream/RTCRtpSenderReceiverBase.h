@@ -49,6 +49,9 @@ public:
     MediaStreamTrack* track() const {  return m_track.get(); }
 
 protected:
+    RTCRtpSenderReceiverBase()
+    { }
+
     RTCRtpSenderReceiverBase(RefPtr<MediaStreamTrack>&& track)
         : m_track(track)
     { }

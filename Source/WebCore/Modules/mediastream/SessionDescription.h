@@ -1,6 +1,5 @@
 /*
- * Copyright (C) 2012 Google Inc. All rights reserved.
- * Copyright (C) 2013 Nokia Corporation and/or its subsidiary(-ies).
+ * Copyright (C) 2015 Ericsson AB. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -12,7 +11,7 @@
  *    notice, this list of conditions and the following disclaimer
  *    in the documentation and/or other materials provided with the
  *    distribution.
- * 3. Neither the name of Google Inc. nor the names of its contributors
+ * 3. Neither the name of Ericsson nor the names of its contributors
  *    may be used to endorse or promote products derived from this
  *    software without specific prior written permission.
  *
@@ -29,53 +28,58 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include "config.h"
+#ifndef SessionDescription_h
+#define SessionDescription_h
 
 #if ENABLE(WEB_RTC)
 
+#include "MediaEndpointSessionConfiguration.h"
 #include "RTCSessionDescription.h"
-
-#include "Dictionary.h"
+#include <wtf/RefCounted.h>
+#include <wtf/RefPtr.h>
 
 namespace WebCore {
 
-static bool isRTCSdpTypeEnumValue(const String& type)
-{
-    return type == "offer" || type == "pranswer" || type == "answer" || type == "rollback";
-}
+class MediaEndpointSessionConfiguration;
+class SDPProcessor;
+class DOMError;
 
-RefPtr<RTCSessionDescription> RTCSessionDescription::create(const Dictionary& dictionary, ExceptionCode& ec)
-{
-    String type;
-    // Dictionary member type is required.
-    if (!dictionary.get("type", type)) {
-        ec = TypeError;
-        return nullptr;
-    }
+class SessionDescription : public RefCounted<SessionDescription> {
+public:
+    enum class Type {
+        Offer = 1,
+        Pranswer = 2,
+        Answer = 3,
+        Rollback = 4
+    };
 
-    if (!isRTCSdpTypeEnumValue(type)) {
-        ec = TypeError;
-        return nullptr;
-    }
+    static Ref<SessionDescription> create(Type, RefPtr<MediaEndpointSessionConfiguration>&&);
+    static RefPtr<SessionDescription> create(RefPtr<RTCSessionDescription>&&, const SDPProcessor&, RefPtr<DOMError>&);
+    virtual ~SessionDescription() { }
 
-    String sdp;
-    dictionary.get("sdp", sdp);
+    RefPtr<RTCSessionDescription> toRTCSessionDescription(const SDPProcessor&) const;
 
-    return adoptRef(new RTCSessionDescription(type, sdp));
-}
+    Type type() const { return m_type; }
+    const String& typeString() const;
+    MediaEndpointSessionConfiguration* configuration() const { return m_configuration.get(); }
 
-Ref<RTCSessionDescription> RTCSessionDescription::create(const String& type, const String& sdp)
-{
-    return adoptRef(*new RTCSessionDescription(type, sdp));
-}
+    bool isLaterThan(SessionDescription* other) const;
 
-RTCSessionDescription::RTCSessionDescription(const String& type, const String& sdp)
-    : m_type(type)
-    , m_sdp(sdp)
-{
-    ASSERT(isRTCSdpTypeEnumValue(m_type));
-}
+private:
+    SessionDescription(Type type, RefPtr<MediaEndpointSessionConfiguration>&& configuration, RefPtr<RTCSessionDescription>&& rtcDescription)
+        : m_type(type)
+        , m_configuration(configuration)
+        , m_rtcDescription(WTFMove(rtcDescription))
+    { }
+
+    Type m_type;
+    RefPtr<MediaEndpointSessionConfiguration> m_configuration;
+
+    RefPtr<RTCSessionDescription> m_rtcDescription;
+};
 
 } // namespace WebCore
 
 #endif // ENABLE(WEB_RTC)
+
+#endif // SessionDescription_h
